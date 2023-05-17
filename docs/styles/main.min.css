@@ -1414,8 +1414,8 @@ video {
   }
 }
 
-.animate-slide-up {
-  animation: slide-up 80s linear infinite;
+.animate-slide-up-alt {
+  animation: slide-up 10s linear infinite;
 }
 
 .grid-cols-12 {
@@ -1823,6 +1823,21 @@ video {
 
   .md\:max-w-\[16rem\] {
     max-width: 16rem;
+  }
+
+  @keyframes slide-up {
+
+    0% {
+      background-position-y: 0px;
+    }
+
+    100% {
+      background-position-y: 258vw;
+    }
+  }
+
+  .md\:animate-slide-up {
+    animation: slide-up 80s linear infinite;
   }
 
   .md\:grid-cols-2 {
