@@ -16,7 +16,7 @@ module.exports = {
 				"slide-right": {
 					"0%": { "background-position-x": "200vh" },
 					"100%": { "background-position-x": "-155vh" },
-				},				
+				},
 				"slide-left-alt": {
 					"0%": { "background-position-x": "100vh" },
 					"100%": { "background-position-x": "455vh" },
@@ -43,6 +43,7 @@ module.exports = {
 				"slide-right": "slide-right 36s linear infinite",
 				"slide-left-alt": "slide-left-alt 32s linear infinite",
 				"slide-up": "slide-up 80s linear infinite",
+				"slide-up-alt": "slide-up 10s linear infinite",
 				"slide-down": "slide-down 80s linear infinite",
 				"fade-in": "fade-in 0.4s ease-out forwards",
 				"fade-out": "fade-out 0.2s ease-out forwards",
