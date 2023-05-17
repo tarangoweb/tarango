@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	console.log("Ready...");
 
-  AOS.init();
+	AOS.init();
 
 	// ----- Scroll ----- //
 	// Get all layers
@@ -108,4 +108,58 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		};
 	}
+
+	// Formspark form
+	// --------------------------------------------------
+	const formSparkID = "1WwymTxU";
+	const form = document.querySelector("[data-form]");
+
+	form.addEventListener("submit", (event) => {
+
+		// prevent default form submission
+		event.preventDefault();
+
+		// get form elements
+		const formContainer = form.parentElement;
+		const inputEmail = form.querySelector("[data-input-email]");
+		const firstName = form.querySelector("[data-input-first-name]");
+		const lastName = form.querySelector("[data-input-last-name]");
+		const message = form.querySelector("[data-input-message]");
+		const buttonSubmit = form.querySelector("[data-button-submit]");
+
+		// prepare success message
+		const formSuccess = document.createElement("p");
+		formSuccess.classList.add("font-bold", "p-4", "border", "border-green-500", "text-green-500", "rounded-sm");
+		formSuccess.innerHTML = "Thank you!";
+
+		// disable submit button
+		buttonSubmit.disabled = true;
+
+		// send form data to formspark
+		fetch("https://submit-form.com/" + formSparkID, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+			},
+			body: JSON.stringify({
+				firstName: firstName.value,
+				lastName: lastName.value,
+				email: inputEmail.value,
+				message: message.value,
+			}),
+		})
+			.then(function (response) {
+				// console.log(response);
+				if (response.status == 200) {
+					// replace form element with p element
+					formContainer.replaceChild(formSuccess, form);
+				}
+			})
+			.catch(function (error) {
+				// console.error(error);
+				// enable submit button
+				buttonSubmit.disabled = false;
+			});
+	});
 });
