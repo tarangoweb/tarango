@@ -1,0 +1,14 @@
+.container {
+	@apply mx-10;
+}
+
+.container-fullbleed {
+	@apply mx-0;
+}
+
+@screen md {
+	.container,
+	.container-fullbleed {
+		@apply w-[84%] max-w-[1440px] mx-auto;
+	}
+}

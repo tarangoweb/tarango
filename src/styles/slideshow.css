@@ -1,0 +1,27 @@
+.min-h-slide {
+  min-height: 36rem;
+}
+
+@screen sm {
+  .min-h-slide {
+    min-height: 20rem;
+  }
+}
+
+@screen md {
+  .min-h-slide {
+    min-height: 36rem;
+  }
+}
+
+@screen lg {
+  .min-h-slide {
+    min-height: 26rem;
+  }
+}
+
+@screen xl {
+  .min-h-slide {
+    min-height: 22rem;
+  }
+}

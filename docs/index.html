@@ -1,1 +1,603 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#ffc40d" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>Tarango: Home</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles/main.css?v=1.0.0" />
+</head>
+
+<body class="font-body font-sans font-light bg-gray-500">
+
+
+  <header>
+    <div class="bg-gray-500 text-gray-100">
+      <div class="container py-12 flex flex-col justify-between min-h-screen">
+        <div class="relative">
+          <nav>
+            <ul class="text-sm font-medium tracking-wider uppercase">
+              <li>
+                <a class="inline-block py-1" href="#approach">Approach</a>
+              </li>
+              <li>
+                <a class="inline-block py-1" href="#about">About</a>
+              </li>
+              <li>
+                <a class="inline-block py-1" href="#experience">Experience</a>
+              </li>
+              <li class="md:hidden">
+                <a class="inline-block py-1" href="#contact">Say Hello</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="hidden md:block absolute top-0 right-0">
+            <ul class="flex gap-x-4 items-center text-xs font-medium tracking-wider uppercase">
+              <li><a href="#contact" class="inline-block px-4 pt-3.5 pb-2.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase no-underline">
+                  <span>Say Hello</span>
+                </a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="lg:grid grid-cols-12">
+          <div class="col-span-8">
+            <div class="lg:pr-24">
+              <div class="-ml-[6%]">
+                <a class="block" href="/" class="logo">
+                  <h1 class="sr-only">Tarango</h1>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 225">
+                    <g fill="currentColor">
+                      <path d="M52 177.901c12.674-4.165 13.451-7.795 13.451-57.392V4.164h-14.49c-26.9 0-39.841 4.41-46.3 34.275H0L3.374 7.794C4.151.267 5.172 0 9.833 0h133.019c4.661 0 5.7.267 6.482 7.795l3.374 30.645h-4.661c-6.483-29.866-19.423-34.276-47.389-34.276H87.451V120.53c0 49.6.777 53.228 13.451 57.392v3.386h-48.92v-3.386l.022-.022Z" data-name="Path 1" />
+                      <path d="M126.556 157.392c0-23.363 17.845-25.968 39.863-35.322l9.833-4.164c15.27-6.481 17.845-13.764 17.845-21.024V78.973c0-17.394-12.43-19.465-21.219-19.465-10.343 0-14.227 5.456-18.113 10.378-3.374 4.41-6.725 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.422-14.81 38.31-14.81 20.176 0 42.172 4.165 42.172 29.086v60.244c0 30.11 2.064 32.716 9.833 32.716a15.8 15.8 0 0 0 8.545-2.605l1.287 2.85c-1.82 1.558-7.236 5.189-17.091 5.189-17.334 0-22.773-8.575-22.773-20.245l-4.151 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.824 0-29.5-9.086-29.5-25.7l.023-.022Zm38.043 19.22c8.79 0 15.781-5.457 25.371-14.81l4.15-4.165v-47.774c-2.6 3.9-8.012 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.336 23.117l-.023-.022Zm77.885 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.871l12.43-13.764c11.12-12.2 16.825-16.614 25.1-16.614 7.5 0 9.833 4.41 9.833 9.354 0 5.969-3.884 10.378-8.79 10.378-6.481 0-9.056-4.165-15.78-4.165-3.884 0-5.7 1.559-10.343 6.748L273.03 91.692v52.983c0 26.235.266 29.866 12.673 33.228v3.385h-43.215v-3.386Zm83.593-20.512c0-23.363 17.846-25.968 39.863-35.322l9.833-4.164c15.271-6.481 17.846-13.764 17.846-21.024V78.973c0-17.394-12.43-19.465-21.22-19.465-10.343 0-14.227 5.456-18.111 10.378-3.374 4.41-6.726 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.421-14.81 38.309-14.81 20.176 0 42.173 4.165 42.173 29.086v60.244c0 30.11 2.063 32.716 9.833 32.716a15.807 15.807 0 0 0 8.545-2.605l1.287 2.85c-1.821 1.558-7.236 5.189-17.091 5.189-17.336 0-22.774-8.575-22.774-20.245l-4.15 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.825 0-29.5-9.086-29.5-25.7l.022-.022Zm38.044 19.22c8.789 0 15.781-5.457 25.369-14.81l4.151-4.165v-47.774c-2.6 3.9-8.013 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.334 23.117l-.022-.022Zm75.31 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.088l9.833-9.087c13.451-12.2 25.371-20.512 38.821-20.512 18.622 0 30.808 9.087 30.808 31.669v57.393c0 26.235 0 29.866 10.343 33.228v3.385h-42.172v-3.383c11.12-3.386 11.652-7.015 11.652-33.228V82.092c0-14.276-6.481-19.732-16.558-19.732-8.012 0-17.845 5.7-32.871 19.465l-9.833 9.087v53.741c0 26.235.266 29.865 11.386 33.228v3.385h-41.928v-3.364Zm159.411-45.7-4.151 3.118c-4.151 3.118-7.5 6.236-7.5 10.379s2.842 6.235 9.567 7.26l49.43 6.748c20.708 2.851 31.318 11.158 31.318 27.795 0 21.291-22.773 37.393-55.889 37.393-24.837 0-51.761-8.307-51.761-27.26 0-12.2 11.652-20.779 23.816-26.235-11.12-2.851-16.048-9.867-16.048-18.44 0-10.133 8.013-16.369 13.207-19.732l4.151-2.851c-11.652-6.235-20.708-17.393-20.708-33.5 0-27.015 24.836-41.8 46.323-41.8a53.174 53.174 0 0 1 24.06 5.969c8.789-7.26 19.931-11.937 26.924-11.937 5.948 0 8.545 3.118 8.545 8.307 0 4.677-3.108 7.26-6.726 7.26-5.438 0-9.322-5.456-15.537-5.456-3.374 0-6.992 1.559-10.343 3.63 11.119 6.748 19.664 18.44 19.664 34.008 0 27.015-25.1 39.732-46.588 39.732a53.291 53.291 0 0 1-21.73-4.41l-.022.022Zm22.773 88.55c29.5 0 44.5-13.763 44.5-26.48s-10.343-14.031-22.507-15.835l-43.481-5.7c-12.164 5.7-16.825 11.425-16.825 22.85 0 16.614 16.315 25.189 38.31 25.189v-.023Zm25.88-123.852c0-25.968-12.43-37.66-26.9-37.66s-26.659 11.692-26.659 37.66 12.43 35.567 26.658 35.567 26.901-9.599 26.901-35.567Zm35.268 22.583c0-40.778 31.828-64.408 58.485-64.408S800 78.707 800 119.485s-32.1 64.408-58.752 64.408-58.485-23.63-58.485-64.408Zm95.752 0c0-43.361-15.781-60.243-37.267-60.243s-37 16.881-37 60.243 15.537 60.244 37 60.244 37.267-16.882 37.267-60.244Z" data-name="Path 2" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-4">
+            <div class="lg:pl-8 lg:border-l lg:min-h-[53%] lg:mt-[14.5%]">
+              <h2 class="pt-4 text-xs font-medium tracking-wide uppercase md:pt-0 sm:text-base">
+                A creative consultancy for<br />
+                elevated executive storytelling
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="min-h-screen fixed -z-10 inset-0">
+      <div data-scroll-layer="slideshow-tiles" class="invisible absolute inset-0">
+        <div class="absolute inset-0">
+          <div class="flex flex-col w-full h-full">
+            <div class="flex-1">
+              <div class="animate-slide-left min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(assets/tiles.jpg)"></div>
+            </div>
+            <div class="flex-1">
+              <div class="animate-slide-right min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(assets/tiles.jpg)"></div>
+            </div>
+            <div class="flex-1">
+              <div class="animate-slide-left-alt min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(assets/tiles.jpg)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scroll-layer="vertical-logos" class="invisible absolute inset-0">
+        <div class="absolute inset-0">
+          <div class="container-fullbleed h-full">
+            <div class="md:grid grid-cols-12 h-full">
+              <div class="col-span-5 col-start-8 flex w-full h-full">
+                <div class="flex-1">
+                  <div class="animate-slide-up min-h-full bg-left-top bg-repeat-y bg-cover" style="background-image: url(assets/logos-stack.png)"></div>
+                </div>
+                <div class="hidden lg:block flex-1">
+                  <div class="animate-slide-down min-h-full bg-left-top bg-repeat-y bg-cover" style="background-image: url(assets/logos-stack.png)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scroll-layer="logo-footer" class="invisible absolute inset-0">
+        <div class="absolute bottom-0 left-0 w-full">
+          <div class="bg-gray-500 text-gray-300">
+            <div class="container py-12">
+              <div class="-ml-[20px]">
+                <a class="block" href="index.html" class="logo">
+                  <h1 class="sr-only">Tarango</h1>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 225">
+                    <g fill="currentColor">
+                      <path d="M52 177.901c12.674-4.165 13.451-7.795 13.451-57.392V4.164h-14.49c-26.9 0-39.841 4.41-46.3 34.275H0L3.374 7.794C4.151.267 5.172 0 9.833 0h133.019c4.661 0 5.7.267 6.482 7.795l3.374 30.645h-4.661c-6.483-29.866-19.423-34.276-47.389-34.276H87.451V120.53c0 49.6.777 53.228 13.451 57.392v3.386h-48.92v-3.386l.022-.022Z" data-name="Path 1" />
+                      <path d="M126.556 157.392c0-23.363 17.845-25.968 39.863-35.322l9.833-4.164c15.27-6.481 17.845-13.764 17.845-21.024V78.973c0-17.394-12.43-19.465-21.219-19.465-10.343 0-14.227 5.456-18.113 10.378-3.374 4.41-6.725 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.422-14.81 38.31-14.81 20.176 0 42.172 4.165 42.172 29.086v60.244c0 30.11 2.064 32.716 9.833 32.716a15.8 15.8 0 0 0 8.545-2.605l1.287 2.85c-1.82 1.558-7.236 5.189-17.091 5.189-17.334 0-22.773-8.575-22.773-20.245l-4.151 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.824 0-29.5-9.086-29.5-25.7l.023-.022Zm38.043 19.22c8.79 0 15.781-5.457 25.371-14.81l4.15-4.165v-47.774c-2.6 3.9-8.012 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.336 23.117l-.023-.022Zm77.885 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.871l12.43-13.764c11.12-12.2 16.825-16.614 25.1-16.614 7.5 0 9.833 4.41 9.833 9.354 0 5.969-3.884 10.378-8.79 10.378-6.481 0-9.056-4.165-15.78-4.165-3.884 0-5.7 1.559-10.343 6.748L273.03 91.692v52.983c0 26.235.266 29.866 12.673 33.228v3.385h-43.215v-3.386Zm83.593-20.512c0-23.363 17.846-25.968 39.863-35.322l9.833-4.164c15.271-6.481 17.846-13.764 17.846-21.024V78.973c0-17.394-12.43-19.465-21.22-19.465-10.343 0-14.227 5.456-18.111 10.378-3.374 4.41-6.726 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.421-14.81 38.309-14.81 20.176 0 42.173 4.165 42.173 29.086v60.244c0 30.11 2.063 32.716 9.833 32.716a15.807 15.807 0 0 0 8.545-2.605l1.287 2.85c-1.821 1.558-7.236 5.189-17.091 5.189-17.336 0-22.774-8.575-22.774-20.245l-4.15 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.825 0-29.5-9.086-29.5-25.7l.022-.022Zm38.044 19.22c8.789 0 15.781-5.457 25.369-14.81l4.151-4.165v-47.774c-2.6 3.9-8.013 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.334 23.117l-.022-.022Zm75.31 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.088l9.833-9.087c13.451-12.2 25.371-20.512 38.821-20.512 18.622 0 30.808 9.087 30.808 31.669v57.393c0 26.235 0 29.866 10.343 33.228v3.385h-42.172v-3.383c11.12-3.386 11.652-7.015 11.652-33.228V82.092c0-14.276-6.481-19.732-16.558-19.732-8.012 0-17.845 5.7-32.871 19.465l-9.833 9.087v53.741c0 26.235.266 29.865 11.386 33.228v3.385h-41.928v-3.364Zm159.411-45.7-4.151 3.118c-4.151 3.118-7.5 6.236-7.5 10.379s2.842 6.235 9.567 7.26l49.43 6.748c20.708 2.851 31.318 11.158 31.318 27.795 0 21.291-22.773 37.393-55.889 37.393-24.837 0-51.761-8.307-51.761-27.26 0-12.2 11.652-20.779 23.816-26.235-11.12-2.851-16.048-9.867-16.048-18.44 0-10.133 8.013-16.369 13.207-19.732l4.151-2.851c-11.652-6.235-20.708-17.393-20.708-33.5 0-27.015 24.836-41.8 46.323-41.8a53.174 53.174 0 0 1 24.06 5.969c8.789-7.26 19.931-11.937 26.924-11.937 5.948 0 8.545 3.118 8.545 8.307 0 4.677-3.108 7.26-6.726 7.26-5.438 0-9.322-5.456-15.537-5.456-3.374 0-6.992 1.559-10.343 3.63 11.119 6.748 19.664 18.44 19.664 34.008 0 27.015-25.1 39.732-46.588 39.732a53.291 53.291 0 0 1-21.73-4.41l-.022.022Zm22.773 88.55c29.5 0 44.5-13.763 44.5-26.48s-10.343-14.031-22.507-15.835l-43.481-5.7c-12.164 5.7-16.825 11.425-16.825 22.85 0 16.614 16.315 25.189 38.31 25.189v-.023Zm25.88-123.852c0-25.968-12.43-37.66-26.9-37.66s-26.659 11.692-26.659 37.66 12.43 35.567 26.658 35.567 26.901-9.599 26.901-35.567Zm35.268 22.583c0-40.778 31.828-64.408 58.485-64.408S800 78.707 800 119.485s-32.1 64.408-58.752 64.408-58.485-23.63-58.485-64.408Zm95.752 0c0-43.361-15.781-60.243-37.267-60.243s-37 16.881-37 60.243 15.537 60.244 37 60.244 37.267-16.882 37.267-60.244Z" data-name="Path 2" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scroll-layer="blank-layer" class="invisible absolute inset-0"></div>
+    </section>
+
+
+    <!-- punch out -->
+    <div data-scroll-layer-trigger="slideshow-tiles" class="min-h-screen punch-out shadow-top shadow-bottom"></div>
+    <!-- end punch out -->
+
+    <section id="approach" class="bg-gray-100 text-gray-400">
+      <div class="container py-12">
+        <article class="prose prose-on-light max-w-none">
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-5">
+              <h2 data-aos="fade-in" data-aos-duration="1000" class="text-5xl lg:text-7xl font-serif font-light mt-4 mb-16 md:pt-16 md:mt-0 sticky top-0">Behind every
+                great design is a great story.</h2>
+            </div>
+            <div class="col-span-6 col-start-7">
+              <div class="tracking-tight mb-16 md:pt-16">
+                <p class="mt-0"><strong class="font-black">TARANGO</strong> is a creative consultancy that specializes
+                  solely on executive story decks.</p>
+                <p>We work closely with our clients to find the story that is not only impactful but genuinely authentic.
+                  And while our work is often described as simple, clean and beautiful, it is always the principles of
+                  compelling and persuasive that guide us.</p>
+                <p>We are professionals in storytelling and transformation and we hold quality design and collaboration as
+                  our key ethos.</p>
+                <p>We understand that business leaders have the need to communicate powerful ideas but are often without
+                  time, resources or capabilities to transform them into a visual story. We partner with you to provide
+                  the strategic framework and high-end quality design not often found in the presentation realm. This
+                  creative collaboration results in a story deck that is a strategic tool to guide you through a
+                  meaningful narrative with true audience connection.</p>
+                <p>While we are a team that brings decades of experience in brand, design and messaging, we
+                  philosophically start the collaboration with a clean slate and keen listening.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-170"></div>
+          <div class="">
+            <h2 class="text-3xl lg:text-5xl font-serif font-light mt-4">Building the components<span class="md:block"></span> of a powerful presentation</h2>
+          </div>
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-4">
+              <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" class="py-3">
+                <h3 class="text-sm font-black uppercase mb-0">
+                  <span class="text-5xl font-thin block mb-6">01</span>
+                  Discovery
+                </h3>
+                <div class="not-prose mt-9">
+                  <ul class="text-sm border-t-2 border-gray-300">
+                    <li class="pt-2 pb-1 border-b border-gray-170">Background and Vision</li>
+                    <li class="pt-2 pb-1 border-b border-gray-170">Brand Assessment</li>
+                    <li class="pt-2 pb-1 border-b border-gray-170">Executive and stakeholder intake</li>
+                    <li class="pt-2 pb-1">Question, discuss, challenge</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-4">
+              <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="py-3">
+                <h3 class="text-sm font-black uppercase mb-0">
+                  <span class="text-5xl font-thin block mb-6">02</span>
+                  Explore
+                </h3>
+                <div class="not-prose mt-9">
+                  <ul class="text-sm border-t-2 border-gray-300">
+                    <li class="pt-2 pb-1 border-b border-gray-170">Concept definition</li>
+                    <li class="pt-2 pb-1 border-b border-gray-170">Design exploration</li>
+                    <li class="pt-2 pb-1">Illustration and data visualization</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-4">
+              <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="py-3">
+                <h3 class="text-sm font-black uppercase mb-0">
+                  <span class="text-5xl font-thin block mb-6">03</span>
+                  Build
+                </h3>
+                <div class="not-prose mt-9">
+                  <ul class="text-sm border-t-2 border-gray-300">
+                    <li class="pt-2 pb-1 border-b border-gray-170">Production</li>
+                    <li class="pt-2 pb-1 border-b border-gray-170">Rehearse</li>
+                    <li class="pt-2 pb-1 border-b border-gray-170">Polish</li>
+                    <li class="pt-2 pb-1">Present</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="bg-gray-100 text-gray-400">
+      <div class="container py-12">
+        <article class="prose prose-on-light max-w-none">
+          <div class="border-b border-gray-170"></div>
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-6">
+              <figure class="my-8 md:my-0 md:pt-8 sticky top-0">
+                <img src="/assets/linda_tarango.png" alt="" />
+              </figure>
+            </div>
+            <div class="col-span-6">
+              <h2 class="text-3xl lg:text-5xl font-serif font-light my-8">Linda is founding partner and leads all client
+                collaborations at Tarango.</h2>
+              <div class="py-3">
+                <div class="tracking-tight">
+                  <p>For nearly 10 years, Linda Tarango served as project manager for Steve Jobs' legendary keynote
+                    presentations that introduced iPod, iTunes, MacBook Air, iPhone, and iPad to the world. Prior to her
+                    work at Apple, Linda managed advertising projects for ABC Television, Disney, AT&T and Cisco. She
+                    works with a trusted and deeply talented group of creative partners that bring decades of experience.
+                  </p>
+                </div>
+                <div class="border-b-2 border-gray-300 mt-24"></div>
+                <h3 class="text-sm font-black uppercase mt-3 mb-0">Capabilities</h3>
+                <div class="not-prose mt-9">
+                  <div class="md:flex items-start">
+                    <ul class="flex-1 text-sm border-t border-gray-170">
+                      <li class="pt-2 pb-1 border-b border-gray-170">Branding</li>
+                      <li class="pt-2 pb-1 border-b border-gray-170">Design</li>
+                      <li class="pt-2 pb-1 border-b border-gray-170">Story Structure</li>
+                      <li class="pt-2 pb-1 border-b border-gray-170">Illustration</li>
+                      <li class="pt-2 pb-1">Data Visualization</li>
+                    </ul>
+                    <ul class="flex-1 text-sm border-t border-gray-170">
+                      <li class="pt-2 pb-1 border-b border-gray-170">Creative Resourcing</li>
+                      <li class="pt-2 pb-1 border-b border-gray-170">Visual identities</li>
+                      <li class="pt-2 pb-1 border-b border-gray-170">Production</li>
+                      <li class="pt-2 pb-1 border-b border-gray-170">Project Management</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section data-scroll-layer-trigger="vertical-logos" class="relative">
+      <div class="absolute inset-0 shadow-top shadow-bottom pointer-events-none"></div>
+      <div class="container-fullbleed">
+        <div class="md:grid grid-cols-12">
+          <!-- punch out -->
+          <div class="punch-out min-h-[60vh] md:min-h-0 md:col-span-5 md:order-2"></div>
+          <!-- end punch out -->
+          <div class="md:col-span-7 bg-gray-200">
+            <div class="container py-16 md:py-24 h-full">
+              <div data-slideshow class="flex flex-col gap-y-9 h-full">
+                <ul class="flex items-center gap-x-2">
+                  <li data-slide-num="0" class="w-4 h-4 rounded-full bg-gray-150">
+                    <span class="sr-only">Slide 1 selected</span>
+                  </li>
+                  <li data-slide-num="1" class="w-4 h-4 rounded-full border border-gray-150">
+                    <span class="sr-only">Slide 2 selected</span>
+                  </li>
+                  <li data-slide-num="2" class="w-4 h-4 rounded-full border border-gray-150">
+                    <span class="sr-only">Slide 3 selected</span>
+                  </li>
+                  <li data-slide-num="3" class="w-4 h-4 rounded-full border border-gray-150">
+                    <span class="sr-only">Slide 4 selected</span>
+                  </li>
+                  <li data-slide-num="4" class="w-4 h-4 rounded-full border border-gray-150">
+                    <span class="sr-only">Slide 5 selected</span>
+                  </li>
+                  <li data-slide-num="5" class="w-4 h-4 rounded-full border border-gray-150">
+                    <span class="sr-only">Slide 6 selected</span>
+                  </li>
+                </ul>
+                <div class="slides flex-1 flex flex-col justify-center">
+                  <ul>
+                    <li data-slide class="">
+                      <div class="prose prose-on-dark max-w-none">
+                        <div class="min-h-slide">
+                          <p>Linda and her team have been true partners and elevated our storytelling. The power of their graphic
+                            and design work speaks for itself &mdash; simple, compelling, and beautiful. What makes for a true
+                            partnership is the ability to carefully listen, reflect and then return having made the complex simple
+                            and the raw perfect. Linda honed her craft with the best having collaborated on the most significant
+                            Apple keynotes for year after year and her clients are able to take advantage of that invaluable
+                            experience.</p>
+                        </div>
+                        <div class="my-4 border-b-2 border-gray-300"></div>
+                        <p class="text-sm">
+                          <strong class="block uppercase">Bob Borchers</strong>
+                          CMO Dolby
+                        </p>
+                      </div>
+                    </li>
+                    <li data-slide class="hidden">
+                      <div class="prose prose-on-dark max-w-none">
+                        <div class="min-h-slide">
+                          <p>Hire her now.</p>
+                          <p>Linda's expertise in executive storytelling is undeniable. She has proven to be a valued partner time
+                            and again as she partnered with my executive leadership teams at Apple, Dolby and ChargePoint. Always
+                            demonstrating that less is more in powerful storytelling, she and her team were amazing to work with as
+                            we refreshed our company narrative in compelling messaging and visuals. A true professional in driving
+                            the hard conversations to ultimately get to great outcomes.</p>
+                        </div>
+                        <div class="my-4 border-b-2 border-gray-300"></div>
+                        <p class="text-sm">
+                          <strong class="block uppercase">Jennifer Bowcock</strong>
+                          Former communications executive AT&T, Apple, Dolby & ChargePoint
+                        </p>
+                      </div>
+                    </li>
+                    <li data-slide class="hidden">
+                      <div class="prose prose-on-dark max-w-none">
+                        <div class="min-h-slide">
+                          <div>
+                            <p>Their work really helped elevate and present us as a first-class brand.</p>
+                          </div>
+                        </div>
+                        <div class="my-4 border-b-2 border-gray-300"></div>
+                        <p class="text-sm">
+                          <strong class="block uppercase">Chris Carlson</strong>
+                          VP Product Management, Qualys
+                        </p>
+                      </div>
+                    </li>
+                    <li data-slide class="hidden">
+                      <div class="prose prose-on-dark max-w-none">
+                        <div class="min-h-slide">
+                          <p>An exceptional ally to have at your side while developing high stake presentations or building a
+                            branded presentation identity. Linda has an uncanny ability to listen to complex business ideas, hone in
+                            on the proper questions, and refine them and distill them into impressive graphics that neatly summarize
+                            sophisticated concepts. Executive team resources are valuable and partnering with Linda and team proved
+                            time and again to be an efficient way to get to some of our best presentations.</p>
+                        </div>
+                        <div class="my-4 border-b-2 border-gray-300"></div>
+                        <p class="text-sm">
+                          <strong class="block uppercase">Andrew Lindsay</strong>
+                          VP Corporate Development, Jawbone
+                        </p>
+                      </div>
+                    </li>
+                    <li data-slide class="hidden">
+                      <div class="prose prose-on-dark max-w-none">
+                        <div class="min-h-slide">
+                          <p>We worked with Linda over a few months where she created and produced a primary deck that we used for
+                            intro-type meetings and funder pitches. It was an uniquely interesting process as it caused us to really
+                            drill down on, among other things, exactly what the essence of the company is, what distinguishes it
+                            from other similar organizations and how to approach this market. We now have a finished product that
+                            accomplishes all of what we set out to do. In addition, we're able to repurpose parts of it as may be
+                            needed for different audiences—a living document so to speak. If you're considering building a
+                            presentation of this type or, for that matter, any type of presentation to further corporate goals, I
+                            think meeting and talking with Linda would be very valuable.</p>
+                        </div>
+                        <div class="my-4 border-b-2 border-gray-300"></div>
+                        <p class="text-sm">
+                          <strong class="block uppercase">Gary Syman</strong>
+                          Retired Goldman Sachs Partner, Philanthropist &amp; Entrepreneur
+                        </p>
+                      </div>
+                    </li>
+                    <li data-slide class="hidden">
+                      <div class="prose prose-on-dark max-w-none">
+                        <div class="min-h-slide">
+                          <p>As a Strategic Messaging Consultant across industries from Healthcare to High Tech, I've experienced
+                            the power of visual storytelling. And when I think of some of the best visual storytelling work, Linda
+                            Tarango stands out. Linda has worked seamlessly with me on multiple corporate projects creating elegant
+                            and visually memorable presentations our clients are giddy to present.</p>
+                        </div>
+                        <div class="my-4 border-b-2 border-gray-300"></div>
+                        <p class="text-sm">
+                          <strong class="block uppercase">Richard Butterfield</strong>
+                          Communications Consultant, Butterfield Speaks
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="min-h-screen bg-gray-500 text-gray-100">
+      <div class="container py-12">
+        <article class="prose prose-on-dark max-w-none mb-16">
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-6">
+              <figure class="">
+                <img src="/assets/case_studies/dolby/cs_dolby_002.jpg" alt="Dolby example slide" />
+              </figure>
+            </div>
+            <div class="col-span-6">
+              <div class="my-8">
+                <div class="border-b-2 border-gray-300"></div>
+                <h3 class="text-xs font-black uppercase mt-3 mb-1">DOLBY</h3>
+                <p class="text-xs">EVP for Dolby Voice Product</p>
+                <p class="text-2xl">Story deck for keynote address at international trade show</p>
+                <div class="py-3"><a href="case-studies/dolby" class="inline-block px-4 pt-3.5 pb-2.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase no-underline">
+                    <span>Learn More</span>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="prose prose-on-dark max-w-none mb-16">
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-6">
+              <figure class="">
+                <img src="/assets/case_studies/impossible/cs_impossible_005.jpg" alt="Impossible example slide" />
+              </figure>
+            </div>
+            <div class="col-span-6">
+              <div class="my-8">
+                <div class="border-b-2 border-gray-300"></div>
+                <h3 class="text-xs font-black uppercase mt-3 mb-1">IMPOSSIBLE FOODS</h3>
+                <p class="text-xs uppercase">CCO</p>
+                <p class="text-2xl">Branded visualization and story flow of strategic communication points for CEO</p>
+                <div class="py-3"><a href="case-studies/impossible-foods" class="inline-block px-4 pt-3.5 pb-2.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase no-underline">
+                    <span>Learn More</span>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="prose prose-on-dark max-w-none mb-16">
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-6">
+              <figure class="">
+                <img src="/assets/case_studies/jawbone_a/cs_jawbone_015.jpg" alt="Jawbone Early Development example slide" />
+              </figure>
+            </div>
+            <div class="col-span-6">
+              <div class="my-8">
+                <div class="border-b-2 border-gray-300"></div>
+                <h3 class="text-xs font-black uppercase mt-3 mb-1">JAWBONE &mdash; Early Development</h3>
+                <p class="text-xs uppercase">CEO</p>
+                <p class="text-2xl">Visual storytelling of wearables market</p>
+                <div class="py-3"><a href="case-studies/jawbone-early-development" class="inline-block px-4 pt-3.5 pb-2.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase no-underline">
+                    <span>Learn More</span>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="prose prose-on-dark max-w-none mb-16">
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-6">
+              <figure class="">
+                <img src="/assets/case_studies/jawbone_b/cs_jawbone_010.jpg" alt="Jawbone later development example slide" />
+              </figure>
+            </div>
+            <div class="col-span-6">
+              <div class="my-8">
+                <div class="border-b-2 border-gray-300"></div>
+                <h3 class="text-xs font-black uppercase mt-3 mb-1">JAWBONE &mdash; Later Development</h3>
+                <p class="text-xs uppercase">CMO &amp; Chief of Staff</p>
+                <p class="text-2xl">Branded product launch slides for channel use</p>
+                <div class="py-3"><a href="case-studies/jawbone-later-development" class="inline-block px-4 pt-3.5 pb-2.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase no-underline">
+                    <span>Learn More</span>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="prose prose-on-dark max-w-none mb-16">
+          <div class="md:grid grid-cols-12 gap-x-12">
+            <div class="col-span-6">
+              <figure class="">
+                <img src="/assets/case_studies/chargepoint/cs_chargepoint_023.jpg" alt="Chargepoint example slide" />
+              </figure>
+            </div>
+            <div class="col-span-6">
+              <div class="my-8">
+                <div class="border-b-2 border-gray-300"></div>
+                <h3 class="text-xs font-black uppercase mt-3 mb-1">CHARGEPOINT</h3>
+                <p class="text-xs uppercase">CMO + Executive Team</p>
+                <p class="text-2xl">Presentation slides for 5 executives at media press briefing</p>
+                <div class="py-3"><a href="case-studies/chargepoint" class="inline-block px-4 pt-3.5 pb-2.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase no-underline">
+                    <span>Learn More</span>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" data-scroll-layer-trigger="logo-footer" class="bg-gray-500 text-gray-100">
+      <div class="shadow-top">
+        <div class="container py-12 md:pt-24">
+          <div class="">
+            <div class="grid gap-y-12 md:gap-y-0 md:gap-x-24 md:grid-cols-2 md:grid-rows-6">
+              <div class="md:col-span-1 md:row-span-2">
+                <h2 class="text-5xl font-serif font-light mt-0">
+                  <span class="block">Let's get</span>
+                  <span class="block">started.</span>
+                </h2>
+              </div>
+              <div class="md:col-span-1 md:row-span-6">
+                <form>
+                  <div class="grid gap-9 mb-9">
+                    <div class="">
+                      <label for="first-name" class="sr-only">First Name</label>
+                      <input type="text" name="first-name" id="first-name" placeholder="First Name" class="w-full py-2 border-b bg-inherit placeholder-current" />
+                    </div>
+                    <div class="">
+                      <label for="last-name" class="sr-only">Last Name</label>
+                      <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="w-full py-2 border-b bg-inherit placeholder-current" />
+                    </div>
+                    <div class="">
+                      <label for="email" class="sr-only">Email</label>
+                      <input type="email" name="email" id="email" placeholder="Email" class="w-full py-2 border-b bg-inherit placeholder-current" />
+                    </div>
+                    <div class="">
+                      <label for="message" class="sr-only">Message</label>
+                      <textarea name="message" id="message" placeholder="What are you looking to create?" class="w-full h-32 p-2 border bg-inherit placeholder-current"></textarea>
+                    </div>
+                    <div class=""><button type="submit" class="inline-block px-4 pt-2.5 pb-1.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase">
+                        <span>Submit</span>
+                      </button></div>
+                  </div>
+                </form>
+              </div>
+              <div class="md:col-span-1 md:row-span-4">
+                <div class="grid gap-9">
+                  <div class="border-t border-gray-300">
+                    <div class="pt-3">
+                      <ul>
+                        <li>
+                          <a class="uppercase" href="#">connect@tarango.com</a>
+                        </li>
+                        <li>
+                          <a class="uppercase" href="#">LinkedIn</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="border-t border-gray-300">
+                    <div class="pt-3">
+                      <div class="text-xs">&copy; 2023 All Rights Reserved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- punch out -->
+    <div class="">
+      <div class="container py-12">
+        <div class="aspect-[7/2]"></div>
+      </div>
+    </div>
+    <!-- end punch out -->
+  </main>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="/scripts/main.js?v=1.0.0"></script>
+</body>
+
+</html>

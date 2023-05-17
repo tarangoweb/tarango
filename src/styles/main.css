@@ -1,0 +1,9 @@
+@tailwind base;
+@import "fonts";
+
+@tailwind components;
+@import "container";
+@import "shadows";
+@import "slideshow";
+
+@tailwind utilities;

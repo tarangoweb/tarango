@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#ffc40d" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>Tarango: Chargepoint</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles/main.css?v=1.0.0" />
+</head>
+
+<body class="font-body font-sans font-light bg-gray-500">
+
+
+  <header>
+    <div class="bg-gray-500 text-gray-100">
+      <div class="container py-12 flex flex-col md:flex-row justify-between">
+        <div class="flex-1">
+          <div class="max-w-[20rem] md:max-w-[16rem]">
+            <div class="-ml-[6%]">
+              <a class="block" href="/" class="logo">
+                <h1 class="sr-only">Tarango</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 225">
+                  <g fill="currentColor">
+                    <path d="M52 177.901c12.674-4.165 13.451-7.795 13.451-57.392V4.164h-14.49c-26.9 0-39.841 4.41-46.3 34.275H0L3.374 7.794C4.151.267 5.172 0 9.833 0h133.019c4.661 0 5.7.267 6.482 7.795l3.374 30.645h-4.661c-6.483-29.866-19.423-34.276-47.389-34.276H87.451V120.53c0 49.6.777 53.228 13.451 57.392v3.386h-48.92v-3.386l.022-.022Z" data-name="Path 1" />
+                    <path d="M126.556 157.392c0-23.363 17.845-25.968 39.863-35.322l9.833-4.164c15.27-6.481 17.845-13.764 17.845-21.024V78.973c0-17.394-12.43-19.465-21.219-19.465-10.343 0-14.227 5.456-18.113 10.378-3.374 4.41-6.725 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.422-14.81 38.31-14.81 20.176 0 42.172 4.165 42.172 29.086v60.244c0 30.11 2.064 32.716 9.833 32.716a15.8 15.8 0 0 0 8.545-2.605l1.287 2.85c-1.82 1.558-7.236 5.189-17.091 5.189-17.334 0-22.773-8.575-22.773-20.245l-4.151 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.824 0-29.5-9.086-29.5-25.7l.023-.022Zm38.043 19.22c8.79 0 15.781-5.457 25.371-14.81l4.15-4.165v-47.774c-2.6 3.9-8.012 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.336 23.117l-.023-.022Zm77.885 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.871l12.43-13.764c11.12-12.2 16.825-16.614 25.1-16.614 7.5 0 9.833 4.41 9.833 9.354 0 5.969-3.884 10.378-8.79 10.378-6.481 0-9.056-4.165-15.78-4.165-3.884 0-5.7 1.559-10.343 6.748L273.03 91.692v52.983c0 26.235.266 29.866 12.673 33.228v3.385h-43.215v-3.386Zm83.593-20.512c0-23.363 17.846-25.968 39.863-35.322l9.833-4.164c15.271-6.481 17.846-13.764 17.846-21.024V78.973c0-17.394-12.43-19.465-21.22-19.465-10.343 0-14.227 5.456-18.111 10.378-3.374 4.41-6.726 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.421-14.81 38.309-14.81 20.176 0 42.173 4.165 42.173 29.086v60.244c0 30.11 2.063 32.716 9.833 32.716a15.807 15.807 0 0 0 8.545-2.605l1.287 2.85c-1.821 1.558-7.236 5.189-17.091 5.189-17.336 0-22.774-8.575-22.774-20.245l-4.15 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.825 0-29.5-9.086-29.5-25.7l.022-.022Zm38.044 19.22c8.789 0 15.781-5.457 25.369-14.81l4.151-4.165v-47.774c-2.6 3.9-8.013 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.334 23.117l-.022-.022Zm75.31 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.088l9.833-9.087c13.451-12.2 25.371-20.512 38.821-20.512 18.622 0 30.808 9.087 30.808 31.669v57.393c0 26.235 0 29.866 10.343 33.228v3.385h-42.172v-3.383c11.12-3.386 11.652-7.015 11.652-33.228V82.092c0-14.276-6.481-19.732-16.558-19.732-8.012 0-17.845 5.7-32.871 19.465l-9.833 9.087v53.741c0 26.235.266 29.865 11.386 33.228v3.385h-41.928v-3.364Zm159.411-45.7-4.151 3.118c-4.151 3.118-7.5 6.236-7.5 10.379s2.842 6.235 9.567 7.26l49.43 6.748c20.708 2.851 31.318 11.158 31.318 27.795 0 21.291-22.773 37.393-55.889 37.393-24.837 0-51.761-8.307-51.761-27.26 0-12.2 11.652-20.779 23.816-26.235-11.12-2.851-16.048-9.867-16.048-18.44 0-10.133 8.013-16.369 13.207-19.732l4.151-2.851c-11.652-6.235-20.708-17.393-20.708-33.5 0-27.015 24.836-41.8 46.323-41.8a53.174 53.174 0 0 1 24.06 5.969c8.789-7.26 19.931-11.937 26.924-11.937 5.948 0 8.545 3.118 8.545 8.307 0 4.677-3.108 7.26-6.726 7.26-5.438 0-9.322-5.456-15.537-5.456-3.374 0-6.992 1.559-10.343 3.63 11.119 6.748 19.664 18.44 19.664 34.008 0 27.015-25.1 39.732-46.588 39.732a53.291 53.291 0 0 1-21.73-4.41l-.022.022Zm22.773 88.55c29.5 0 44.5-13.763 44.5-26.48s-10.343-14.031-22.507-15.835l-43.481-5.7c-12.164 5.7-16.825 11.425-16.825 22.85 0 16.614 16.315 25.189 38.31 25.189v-.023Zm25.88-123.852c0-25.968-12.43-37.66-26.9-37.66s-26.659 11.692-26.659 37.66 12.43 35.567 26.658 35.567 26.901-9.599 26.901-35.567Zm35.268 22.583c0-40.778 31.828-64.408 58.485-64.408S800 78.707 800 119.485s-32.1 64.408-58.752 64.408-58.485-23.63-58.485-64.408Zm95.752 0c0-43.361-15.781-60.243-37.267-60.243s-37 16.881-37 60.243 15.537 60.244 37 60.244 37.267-16.882 37.267-60.244Z" data-name="Path 2" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex-1">
+          <nav class="md:hidden">
+            <ul class="text-sm font-medium tracking-wider uppercase">
+              <li>
+                <a class="inline-block py-1" href="/">Home</a>
+              </li>
+              <li class="md:hidden">
+                <a class="inline-block py-1" href="#contact">Say Hello</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="hidden md:block absolute top-0 right-0">
+            <ul class="flex gap-x-4 items-center">
+              <li><a class="inline-block px-4 pt-3.5 pb-2.5 text-xs font-medium tracking-wider uppercase" href="/">Home</a></li>
+              <li><a href="#contact" class="inline-block px-4 pt-3.5 pb-2.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase no-underline">
+                  <span>Say Hello</span>
+                </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="min-h-screen fixed -z-10 inset-0">
+      <div data-scroll-layer="slideshow-tiles" class="invisible absolute inset-0">
+        <div class="absolute inset-0">
+          <div class="flex flex-col w-full h-full">
+            <div class="flex-1">
+              <div class="animate-slide-left min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(assets/tiles.jpg)"></div>
+            </div>
+            <div class="flex-1">
+              <div class="animate-slide-right min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(assets/tiles.jpg)"></div>
+            </div>
+            <div class="flex-1">
+              <div class="animate-slide-left-alt min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(assets/tiles.jpg)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scroll-layer="vertical-logos" class="invisible absolute inset-0">
+        <div class="absolute inset-0">
+          <div class="container-fullbleed h-full">
+            <div class="md:grid grid-cols-12 h-full">
+              <div class="col-span-5 col-start-8 flex w-full h-full">
+                <div class="flex-1">
+                  <div class="animate-slide-up min-h-full bg-left-top bg-repeat-y bg-cover" style="background-image: url(assets/logos-stack.png)"></div>
+                </div>
+                <div class="hidden lg:block flex-1">
+                  <div class="animate-slide-down min-h-full bg-left-top bg-repeat-y bg-cover" style="background-image: url(assets/logos-stack.png)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scroll-layer="logo-footer" class="invisible absolute inset-0">
+        <div class="absolute bottom-0 left-0 w-full">
+          <div class="bg-gray-500 text-gray-300">
+            <div class="container py-12">
+              <div class="-ml-[20px]">
+                <a class="block" href="index.html" class="logo">
+                  <h1 class="sr-only">Tarango</h1>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 225">
+                    <g fill="currentColor">
+                      <path d="M52 177.901c12.674-4.165 13.451-7.795 13.451-57.392V4.164h-14.49c-26.9 0-39.841 4.41-46.3 34.275H0L3.374 7.794C4.151.267 5.172 0 9.833 0h133.019c4.661 0 5.7.267 6.482 7.795l3.374 30.645h-4.661c-6.483-29.866-19.423-34.276-47.389-34.276H87.451V120.53c0 49.6.777 53.228 13.451 57.392v3.386h-48.92v-3.386l.022-.022Z" data-name="Path 1" />
+                      <path d="M126.556 157.392c0-23.363 17.845-25.968 39.863-35.322l9.833-4.164c15.27-6.481 17.845-13.764 17.845-21.024V78.973c0-17.394-12.43-19.465-21.219-19.465-10.343 0-14.227 5.456-18.113 10.378-3.374 4.41-6.725 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.422-14.81 38.31-14.81 20.176 0 42.172 4.165 42.172 29.086v60.244c0 30.11 2.064 32.716 9.833 32.716a15.8 15.8 0 0 0 8.545-2.605l1.287 2.85c-1.82 1.558-7.236 5.189-17.091 5.189-17.334 0-22.773-8.575-22.773-20.245l-4.151 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.824 0-29.5-9.086-29.5-25.7l.023-.022Zm38.043 19.22c8.79 0 15.781-5.457 25.371-14.81l4.15-4.165v-47.774c-2.6 3.9-8.012 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.336 23.117l-.023-.022Zm77.885 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.871l12.43-13.764c11.12-12.2 16.825-16.614 25.1-16.614 7.5 0 9.833 4.41 9.833 9.354 0 5.969-3.884 10.378-8.79 10.378-6.481 0-9.056-4.165-15.78-4.165-3.884 0-5.7 1.559-10.343 6.748L273.03 91.692v52.983c0 26.235.266 29.866 12.673 33.228v3.385h-43.215v-3.386Zm83.593-20.512c0-23.363 17.846-25.968 39.863-35.322l9.833-4.164c15.271-6.481 17.846-13.764 17.846-21.024V78.973c0-17.394-12.43-19.465-21.22-19.465-10.343 0-14.227 5.456-18.111 10.378-3.374 4.41-6.726 8.574-12.94 8.574a7.764 7.764 0 0 1-8.035-8.04c0-9.354 19.421-14.81 38.309-14.81 20.176 0 42.173 4.165 42.173 29.086v60.244c0 30.11 2.063 32.716 9.833 32.716a15.807 15.807 0 0 0 8.545-2.605l1.287 2.85c-1.821 1.558-7.236 5.189-17.091 5.189-17.336 0-22.774-8.575-22.774-20.245l-4.15 4.165c-9.056 9.086-18.378 16.1-33.893 16.1-16.825 0-29.5-9.086-29.5-25.7l.022-.022Zm38.044 19.22c8.789 0 15.781-5.457 25.369-14.81l4.151-4.165v-47.774c-2.6 3.9-8.013 8.307-17.6 12.472l-9.833 4.165c-15 6.235-19.4 14.275-19.4 27.014 0 16.369 5.949 23.117 17.334 23.117l-.022-.022Zm75.31 1.292c10.1-3.386 10.343-7.015 10.343-33.228v-41.293c0-24.409 0-25.189-12.163-27.527v-3.9l32.339-15.835v29.088l9.833-9.087c13.451-12.2 25.371-20.512 38.821-20.512 18.622 0 30.808 9.087 30.808 31.669v57.393c0 26.235 0 29.866 10.343 33.228v3.385h-42.172v-3.383c11.12-3.386 11.652-7.015 11.652-33.228V82.092c0-14.276-6.481-19.732-16.558-19.732-8.012 0-17.845 5.7-32.871 19.465l-9.833 9.087v53.741c0 26.235.266 29.865 11.386 33.228v3.385h-41.928v-3.364Zm159.411-45.7-4.151 3.118c-4.151 3.118-7.5 6.236-7.5 10.379s2.842 6.235 9.567 7.26l49.43 6.748c20.708 2.851 31.318 11.158 31.318 27.795 0 21.291-22.773 37.393-55.889 37.393-24.837 0-51.761-8.307-51.761-27.26 0-12.2 11.652-20.779 23.816-26.235-11.12-2.851-16.048-9.867-16.048-18.44 0-10.133 8.013-16.369 13.207-19.732l4.151-2.851c-11.652-6.235-20.708-17.393-20.708-33.5 0-27.015 24.836-41.8 46.323-41.8a53.174 53.174 0 0 1 24.06 5.969c8.789-7.26 19.931-11.937 26.924-11.937 5.948 0 8.545 3.118 8.545 8.307 0 4.677-3.108 7.26-6.726 7.26-5.438 0-9.322-5.456-15.537-5.456-3.374 0-6.992 1.559-10.343 3.63 11.119 6.748 19.664 18.44 19.664 34.008 0 27.015-25.1 39.732-46.588 39.732a53.291 53.291 0 0 1-21.73-4.41l-.022.022Zm22.773 88.55c29.5 0 44.5-13.763 44.5-26.48s-10.343-14.031-22.507-15.835l-43.481-5.7c-12.164 5.7-16.825 11.425-16.825 22.85 0 16.614 16.315 25.189 38.31 25.189v-.023Zm25.88-123.852c0-25.968-12.43-37.66-26.9-37.66s-26.659 11.692-26.659 37.66 12.43 35.567 26.658 35.567 26.901-9.599 26.901-35.567Zm35.268 22.583c0-40.778 31.828-64.408 58.485-64.408S800 78.707 800 119.485s-32.1 64.408-58.752 64.408-58.485-23.63-58.485-64.408Zm95.752 0c0-43.361-15.781-60.243-37.267-60.243s-37 16.881-37 60.243 15.537 60.244 37 60.244 37.267-16.882 37.267-60.244Z" data-name="Path 2" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scroll-layer="blank-layer" class="invisible absolute inset-0"></div>
+    </section>
+
+
+    <section class="bg-gray-500 text-gray-100">
+      <div class="container py-12">
+        <article class="prose prose-on-dark max-w-none">
+          <div class="md:grid grid-cols-2 gap-x-12">
+            <div class="">
+              <div class="border-b-2 border-gray-300"></div>
+              <h2 class="text-sm font-black uppercase mt-3 mb-0">Chargepoint</h2>
+              <p class="my-12 md:mt-16 md:mb-24 text-3xl font-serif font-light">Line about the case study, focused on the
+                problem solved by Tarango's efforts.</p>
+              <div class="border-b-2 border-gray-300"></div>
+              <h2 class="text-base font-medium mt-3 mb-0">Sample headline</h2>
+              <div class="mt-8 mb-16 tracking-tight">
+                <p class="">Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed
+                  consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi
+                  leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus
+                  posuere velit aliquet.</p>
+                <p class="">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
+                  purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                  odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+              </div>
+            </div>
+            <div class="">
+              <div class="">
+                <figure class="mt-0">
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_001.jpg" alt="Chargepoint slide 1" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_002.jpg" alt="Chargepoint slide 2" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_003.jpg" alt="Chargepoint slide 3" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_004.jpg" alt="Chargepoint slide 4" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_005.jpg" alt="Chargepoint slide 5" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_006.jpg" alt="Chargepoint slide 6" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_007.jpg" alt="Chargepoint slide 7" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_008.jpg" alt="Chargepoint slide 8" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_009.jpg" alt="Chargepoint slide 9" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_010.jpg" alt="Chargepoint slide 10" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_011.jpg" alt="Chargepoint slide 11" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_012.jpg" alt="Chargepoint slide 12" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_013.jpg" alt="Chargepoint slide 13" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_014.jpg" alt="Chargepoint slide 14" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_015.jpg" alt="Chargepoint slide 15" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_016.jpg" alt="Chargepoint slide 16" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_017.jpg" alt="Chargepoint slide 17" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_018.jpg" alt="Chargepoint slide 18" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_019.jpg" alt="Chargepoint slide 19" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_020.jpg" alt="Chargepoint slide 20" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_021.jpg" alt="Chargepoint slide 21" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_022.jpg" alt="Chargepoint slide 22" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_023.jpg" alt="Chargepoint slide 23" />
+                </figure>
+                <figure>
+                  <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_024.jpg" alt="Chargepoint slide 24" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" data-scroll-layer-trigger="logo-footer" class="bg-gray-500 text-gray-100">
+      <div class="shadow-top">
+        <div class="container py-12 md:pt-24">
+          <div class="">
+            <div class="grid gap-y-12 md:gap-y-0 md:gap-x-24 md:grid-cols-2 md:grid-rows-6">
+              <div class="md:col-span-1 md:row-span-2">
+                <h2 class="text-5xl font-serif font-light mt-0">
+                  <span class="block">Let's get</span>
+                  <span class="block">started.</span>
+                </h2>
+              </div>
+              <div class="md:col-span-1 md:row-span-6">
+                <form>
+                  <div class="grid gap-9 mb-9">
+                    <div class="">
+                      <label for="first-name" class="sr-only">First Name</label>
+                      <input type="text" name="first-name" id="first-name" placeholder="First Name" class="w-full py-2 border-b bg-inherit placeholder-current" />
+                    </div>
+                    <div class="">
+                      <label for="last-name" class="sr-only">Last Name</label>
+                      <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="w-full py-2 border-b bg-inherit placeholder-current" />
+                    </div>
+                    <div class="">
+                      <label for="email" class="sr-only">Email</label>
+                      <input type="email" name="email" id="email" placeholder="Email" class="w-full py-2 border-b bg-inherit placeholder-current" />
+                    </div>
+                    <div class="">
+                      <label for="message" class="sr-only">Message</label>
+                      <textarea name="message" id="message" placeholder="What are you looking to create?" class="w-full h-32 p-2 border bg-inherit placeholder-current"></textarea>
+                    </div>
+                    <div class=""><button type="submit" class="inline-block px-4 pt-2.5 pb-1.5 bg-inherit border rounded-full text-xs font-medium tracking-wider uppercase">
+                        <span>Submit</span>
+                      </button></div>
+                  </div>
+                </form>
+              </div>
+              <div class="md:col-span-1 md:row-span-4">
+                <div class="grid gap-9">
+                  <div class="border-t border-gray-300">
+                    <div class="pt-3">
+                      <ul>
+                        <li>
+                          <a class="uppercase" href="#">connect@tarango.com</a>
+                        </li>
+                        <li>
+                          <a class="uppercase" href="#">LinkedIn</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="border-t border-gray-300">
+                    <div class="pt-3">
+                      <div class="text-xs">&copy; 2023 All Rights Reserved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- punch out -->
+    <div class="">
+      <div class="container py-12">
+        <div class="aspect-[7/2]"></div>
+      </div>
+    </div>
+    <!-- end punch out -->
+  </main>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="/scripts/main.js?v=1.0.0"></script>
+</body>
+
+</html>
