@@ -1,5 +1,5 @@
 .min-h-slide {
-  min-height: 36rem;
+  min-height: 28rem;
 }
 
 @screen sm {
@@ -10,18 +10,18 @@
 
 @screen md {
   .min-h-slide {
-    min-height: 36rem;
+    min-height: 26rem;
   }
 }
 
 @screen lg {
   .min-h-slide {
-    min-height: 26rem;
+    min-height: 22rem;
   }
 }
 
 @screen xl {
   .min-h-slide {
-    min-height: 22rem;
+    min-height: 20rem;
   }
 }
