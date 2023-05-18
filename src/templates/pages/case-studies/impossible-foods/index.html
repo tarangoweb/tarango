@@ -1,35 +1,6 @@
 @@include('../_partials/meta/head.html', { "title": "Tarango: Impossible Foods" })
 
-<header>
-	<div class="bg-gray-500 text-gray-100">
-		<div class="container py-12 flex flex-col md:flex-row justify-between">
-			<div class="flex-1">
-				<div class="max-w-[20rem] md:max-w-[16rem]">@@include('../_partials/logo-hero.html')</div>
-			</div>
-			<div class="relative flex-1">
-				<nav class="md:hidden">
-					<ul class="text-sm font-medium tracking-wider uppercase">
-						<li>
-							<a class="inline-block py-1"
-								href="/">Home</a>
-						</li>
-						<li class="md:hidden">
-							<a class="inline-block py-1"
-								href="#contact">Say Hello</a>
-						</li>
-					</ul>
-				</nav>
-				<nav class="hidden md:block absolute top-0 right-0">
-					<ul class="flex gap-x-4 items-center">
-						<li><a class="inline-block px-4 pt-3.5 pb-2.5 text-xs font-medium tracking-wider uppercase"
-								href="/">Home</a></li>
-						<li>@@include('../_partials/link-button.html', { "href": "#contact", "text": "Say Hello" })</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-</header>
+@@include('../_partials/header-minimal.html')
 
 <main>
 	@@include('../_partials/scroll-layers.html')
