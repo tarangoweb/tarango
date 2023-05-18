@@ -2,6 +2,7 @@
 @import "fonts";
 
 @tailwind components;
+@import "avoid-scroll-flicker";
 @import "container";
 @import "shadows";
 @import "slideshow";
