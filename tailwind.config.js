@@ -10,24 +10,36 @@ module.exports = {
 		extend: {
 			keyframes: {
 				"slide-left": {
+					"0%": { "background-position-x": "0px" },
+					"100%": { "background-position-x": "3200px" },
+				},
+				"slide-right": {
+					"0%": { "background-position-x": "1000px" },
+					"100%": { "background-position-x": "-2200px" },
+				},
+				"slide-left-alt": {
+					"0%": { "background-position-x": "-1000px" },
+					"100%": { "background-position-x": "2200px" },
+				},
+				"vh-slide-left": {
 					"0%": { "background-position-x": "0vh" },
 					"100%": { "background-position-x": "355vh" },
 				},
-				"slide-right": {
+				"vh-slide-right": {
 					"0%": { "background-position-x": "200vh" },
 					"100%": { "background-position-x": "-155vh" },
 				},
-				"slide-left-alt": {
+				"vh-slide-left-alt": {
 					"0%": { "background-position-x": "100vh" },
 					"100%": { "background-position-x": "455vh" },
 				},
 				"slide-up": {
-					"0%": { "background-position-y": "0px" },
-					"100%": { "background-position-y": "258vw" },
+					"0%": { "background-position-y": "0vw" },
+					"100%": { "background-position-y": "1500px" },
 				},
 				"slide-down": {
-					"0%": { "background-position-y": "100vw" },
-					"100%": { "background-position-y": "-158vw" },
+					"0%": { "background-position-y": "1500px" },
+					"100%": { "background-position-y": "0px" },
 				},
 				"fade-in": {
 					"0%": { opacity: "0%" },
@@ -39,12 +51,14 @@ module.exports = {
 				},
 			},
 			animation: {
-				"slide-left": "slide-left 40s linear infinite",
+				"slide-left": "slide-left 40s linear infinite forwards",
 				"slide-right": "slide-right 36s linear infinite",
 				"slide-left-alt": "slide-left-alt 32s linear infinite",
-				"slide-up": "slide-up 80s linear infinite",
-				"slide-up-alt": "slide-up 10s linear infinite",
-				"slide-down": "slide-down 80s linear infinite",
+				"vh-slide-left": "slide-left 40s linear infinite forwards",
+				"vh-slide-right": "slide-right 36s linear infinite",
+				"vh-slide-left-alt": "slide-left-alt 32s linear infinite",
+				"slide-up": "slide-up 16s linear infinite",
+				"slide-down": "slide-down 16s linear infinite",
 				"fade-in": "fade-in 0.4s ease-out forwards",
 				"fade-out": "fade-out 0.2s ease-out forwards",
 			},
