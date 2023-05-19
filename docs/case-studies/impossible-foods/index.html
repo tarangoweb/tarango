@@ -25,7 +25,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles/main.css?v=1684447952" />
+  <link rel="stylesheet" href="/styles/main.css?v=1684519920" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-23VEJM9HHN"></script>
   <script>
@@ -86,20 +86,25 @@
   </header>
 
   <main>
-    <section class="fixed -z-10 inset-0 avoid-scroll-flicker pointer-events-none">
+    <section class="fixed -z-10 top-0 left-0 right-0 h-[4000px] lg:h-screen avoid-scroll-flicker pointer-events-none">
       <div data-scroll-layer="slideshow-tiles" class="invisible absolute inset-0">
-        <div class="absolute inset-0">
-          <div class="flex flex-col w-full h-full">
-            <div class="flex-1">
-              <div class="animate-slide-left min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
-            </div>
-            <div class="flex-1">
-              <div class="animate-slide-right min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
-            </div>
-            <div class="flex-1">
-              <div class="animate-slide-left-alt min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
-            </div>
-          </div>
+        <div class="absolute top-0 h-[300px] lg:h-[33.333vh] left-0 w-full">
+          <div class="animate-slide-left lg:animate-vh-slide-left h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
+        </div>
+        <div class="absolute top-[300px] h-[300px] lg:top-[33.333vh] lg:h-[33.333vh] left-0 w-full">
+          <div class="animate-slide-right lg:animate-vh-slide-right h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
+        </div>
+        <div class="absolute top-[600px] h-[300px] lg:top-[66.666vh] lg:h-[33.333vh] left-0 w-full">
+          <div class="animate-slide-left-alt lg:animate-vh-slide-left-alt min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
+        </div>
+        <div class="lg:hidden absolute top-[900px] h-[300px] left-0 w-full">
+          <div class="animate-slide-left h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
+        </div>
+        <div class="lg:hidden absolute top-[1200px] h-[300px] left-0 w-full">
+          <div class="animate-slide-right h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
+        </div>
+        <div class="lg:hidden absolute top-[1500px] h-[300px] left-0 w-full">
+          <div class="animate-slide-left-alt min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles.jpg)"></div>
         </div>
       </div>
       <div data-scroll-layer="vertical-logos" class="invisible absolute inset-0">
@@ -108,10 +113,10 @@
             <div class="md:grid grid-cols-12 h-full">
               <div class="col-span-5 col-start-8 flex w-full h-full">
                 <div class="flex-1">
-                  <div class="animate-slide-up-alt md:animate-slide-up min-h-full bg-left-top bg-repeat-y bg-cover" style="background-image: url(/assets/logos-stack.png)"></div>
+                  <div class="animate-slide-up w-[200px] h-full mx-auto bg-left-top bg-repeat-y bg-[length:100%_auto]" style="background-image: url(/assets/logos-stack.png)"></div>
                 </div>
                 <div class="hidden lg:block flex-1">
-                  <div class="animate-slide-down min-h-full bg-left-top bg-repeat-y bg-cover" style="background-image: url(/assets/logos-stack.png)"></div>
+                  <div class="animate-slide-down w-[200px] h-full mx-auto bg-left-top bg-repeat-y bg-[length:100%_auto]" style="background-image: url(/assets/logos-stack.png)"></div>
                 </div>
               </div>
             </div>
@@ -139,7 +144,6 @@
       </div>
       <div data-scroll-layer="blank-layer" class="invisible absolute inset-0"></div>
     </section>
-
 
     <section class="bg-gray-500 text-gray-100">
       <div class="container py-12">
@@ -278,7 +282,7 @@
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="text/javascript" src="/scripts/main.js?v=1684447952"></script>
+  <script type="text/javascript" src="/scripts/main.js?v=1684519920"></script>
 </body>
 
 </html>
