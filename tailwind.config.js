@@ -51,9 +51,9 @@ module.exports = {
 				},
 			},
 			animation: {
-				"slide-left": "slide-left 4s linear infinite forwards",
-				"slide-right": "slide-right 3.6s linear infinite",
-				"slide-left-alt": "slide-left-alt 3.2s linear infinite",
+				"slide-left": "slide-left 40s linear infinite forwards",
+				"slide-right": "slide-right 36s linear infinite",
+				"slide-left-alt": "slide-left-alt 32s linear infinite",
 				"vh-slide-left": "slide-left 40s linear infinite forwards",
 				"vh-slide-right": "slide-right 36s linear infinite",
 				"vh-slide-left-alt": "slide-left-alt 32s linear infinite",
