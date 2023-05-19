@@ -11,15 +11,15 @@ module.exports = {
 			keyframes: {
 				"slide-left": {
 					"0%": { "background-position-x": "0px" },
-					"100%": { "background-position-x": "3200px" },
+					"100%": { "background-position-x": "2560px" },
 				},
 				"slide-right": {
 					"0%": { "background-position-x": "1000px" },
-					"100%": { "background-position-x": "-2200px" },
+					"100%": { "background-position-x": "-1560px" },
 				},
 				"slide-left-alt": {
 					"0%": { "background-position-x": "-1000px" },
-					"100%": { "background-position-x": "2200px" },
+					"100%": { "background-position-x": "1560px" },
 				},
 				"vh-slide-left": {
 					"0%": { "background-position-x": "0vh" },
@@ -51,9 +51,9 @@ module.exports = {
 				},
 			},
 			animation: {
-				"slide-left": "slide-left 40s linear infinite forwards",
-				"slide-right": "slide-right 36s linear infinite",
-				"slide-left-alt": "slide-left-alt 32s linear infinite",
+				"slide-left": "slide-left 4s linear infinite forwards",
+				"slide-right": "slide-right 3.6s linear infinite",
+				"slide-left-alt": "slide-left-alt 3.2s linear infinite",
 				"vh-slide-left": "slide-left 40s linear infinite forwards",
 				"vh-slide-right": "slide-right 36s linear infinite",
 				"vh-slide-left-alt": "slide-left-alt 32s linear infinite",
