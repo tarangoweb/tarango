@@ -64,12 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
 			marker.addEventListener("click", () => {
 				// Hide all slides
 				slides.forEach((slide) => {
-					slide.classList.add("hidden");
+					slide.classList.remove("animate-fade-in");
+					slide.classList.add("animate-fade-out");
 				});
 
 				// Show the clicked slide
 				currentSlide = marker.dataset.slideNum;
-				slides[currentSlide].classList.remove("hidden");
+				slides[currentSlide].classList.remove("animate-fade-out");
+				slides[currentSlide].classList.add("animate-fade-in");
 
 				updateSlideNumMarkers();
 			});
@@ -83,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			// Hide all slides
 			slides.forEach((slide) => {
-				slide.classList.add("hidden");
+				slide.classList.remove("animate-fade-in");
+				slide.classList.add("animate-fade-out");
 			});
 
 			// Show the next slide
@@ -91,7 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (currentSlide >= slides.length) {
 				currentSlide = 0;
 			}
-			slides[currentSlide].classList.remove("hidden");
+			slides[currentSlide].classList.remove("animate-fade-out");
+			slides[currentSlide].classList.add("animate-fade-in");
 
 			updateSlideNumMarkers();
 		}, slideShowAutoAdvanceInterval);
@@ -115,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	const form = document.querySelector("[data-form]");
 
 	form.addEventListener("submit", (event) => {
-
 		// prevent default form submission
 		event.preventDefault();
 
