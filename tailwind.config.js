@@ -49,11 +49,11 @@ module.exports = {
 					"100%": { "background-position-x": "455vh" },
 				},
 				"slide-up": {
-					"0%": { "background-position-y": "0vw" },
-					"100%": { "background-position-y": "1500px" },
+					"0%": { "background-position-y": "0px" },
+					"100%": { "background-position-y": "1275px" },
 				},
 				"slide-down": {
-					"0%": { "background-position-y": "1500px" },
+					"0%": { "background-position-y": "1275px" },
 					"100%": { "background-position-y": "0px" },
 				},
 				"fade-in": {
