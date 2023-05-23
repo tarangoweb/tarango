@@ -3,6 +3,21 @@
 module.exports = {
 	content: ["./src/**/*.{html,js}"],
 	theme: {
+		fontSize: {
+			xs: ["10px", "23.5px"],
+			sm: ["14px", "20px"],
+			base: ["16px", "24px"],
+			lg: ["20px", "28px"],
+			xl: ["24px", "32px"],
+			"2xl": ["30px", "35px"],
+			"3xl": ["40px", "44px"],
+			"4xl": ["48px", "56px"],
+			"5xl": ["50px", "60px"],
+			"6xl": ["64px", "72px"],
+			"7xl": ["72px", "80px"],
+			"8xl": ["80px", "80px"],
+			"9xl": ["88px", "96px"],
+		},
 		fontFamily: {
 			sans: ["'Cooper Hewitt'", "sans-serif"],
 			serif: ["'Schnyder S'", "sans-serif"],
@@ -57,8 +72,8 @@ module.exports = {
 				"vh-slide-left": "slide-left 40s linear infinite forwards",
 				"vh-slide-right": "slide-right 36s linear infinite",
 				"vh-slide-left-alt": "slide-left-alt 32s linear infinite",
-				"slide-up": "slide-up 16s linear infinite",
-				"slide-down": "slide-down 16s linear infinite",
+				"slide-up": "slide-up 30s linear infinite",
+				"slide-down": "slide-down 30s linear infinite",
 				"fade-in": "fade-in 0.4s ease-out forwards",
 				"fade-out": "fade-out 0.2s ease-out forwards",
 			},
@@ -69,15 +84,30 @@ module.exports = {
 					170: "#C4C4C4",
 					200: "#858585",
 					300: "#616161",
+					390: "#454545",
 					400: "#434240",
 					500: "#353634",
 					600: "#282724",
 				},
 				cream: {
-					500: "#F2F2EB",
+					500: "#F7F2E5",
 				},
 			},
 			typography: ({ theme }) => ({
+				sm: {
+					css: {
+						"font-size": "16px",
+						"line-height": "20px",
+						"max-width": "none",
+					},
+				},
+				base: {
+					css: {
+						"font-size": "20px",
+						"line-height": 1.5,
+						"max-width": "none",
+					},
+				},
 				"on-light": {
 					css: {
 						"--tw-prose-body": theme("colors.gray[400]"),

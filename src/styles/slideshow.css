@@ -1,27 +1,55 @@
+.min-h-slides {
+  height: 32rem;
+}
+
+@screen sm {
+  .min-h-slides {
+    height: 24rem;
+  }
+}
+
+@screen md {
+  .min-h-slides {
+    height: 34rem;
+  }
+}
+
+@screen lg {
+  .min-h-slides {
+    height: 30rem;
+  }
+}
+
+@screen xl {
+  .min-h-slides {
+    height: 24rem;
+  }
+}
+
 .min-h-slide {
-  min-height: 28rem;
+  height: 28rem;
 }
 
 @screen sm {
   .min-h-slide {
-    min-height: 20rem;
+    height: 20rem;
   }
 }
 
 @screen md {
   .min-h-slide {
-    min-height: 26rem;
+    height: 30rem;
   }
 }
 
 @screen lg {
   .min-h-slide {
-    min-height: 22rem;
+    height: 26rem;
   }
 }
 
 @screen xl {
   .min-h-slide {
-    min-height: 20rem;
+    height: 20rem;
   }
 }

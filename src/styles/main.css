@@ -2,9 +2,14 @@
 @import "fonts";
 
 @tailwind components;
+@import "animated-underline";
 @import "avoid-scroll-flicker";
 @import "container";
 @import "shadows";
 @import "slideshow";
 
 @tailwind utilities;
+
+::selection {
+  background: #868686;
+}
