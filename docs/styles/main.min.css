@@ -1752,7 +1752,7 @@ video {
 @keyframes slide-down {
 
   0% {
-    background-position-y: 1275px;
+    background-position-y: 1708px;
   }
 
   100% {
@@ -1816,7 +1816,7 @@ video {
   }
 
   100% {
-    background-position-y: 1275px;
+    background-position-y: 1708px;
   }
 }
 
@@ -1873,6 +1873,10 @@ video {
 
 .gap-y-9 {
   row-gap: 2.25rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .scroll-smooth {
