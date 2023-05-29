@@ -1627,6 +1627,14 @@ video {
   margin-top: 2.25rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -2510,6 +2518,14 @@ video {
     margin-top: 4rem;
   }
 
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2603,6 +2619,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+
+  .lg\:sticky {
+    position: sticky;
+  }
 
   .lg\:top-\[33\.333vh\] {
     top: 33.333vh;
@@ -2709,6 +2729,10 @@ video {
 }
 
 @media (min-width: 1280px) {
+
+  .xl\:sticky {
+    position: sticky;
+  }
 
   .xl\:max-w-\[420px\] {
     max-width: 420px;
