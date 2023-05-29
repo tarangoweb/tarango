@@ -126,11 +126,11 @@
           <div class="animate-slide-right min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles-row-02.jpg)"></div>
         </div>
       </div>
-      <div data-scroll-layer="vertical-logos" class="invisible absolute inset-0">
-        <div class="absolute inset-0">
+      <div data-scroll-layer="vertical-logos" class="invisible absolute inset-0 bg-gray-390">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent from-60% to-gray-600 to-60%">
           <div class="container-fullbleed h-full">
-            <div class="md:grid grid-cols-12 h-full">
-              <div class="col-span-5 col-start-8 flex w-full h-full">
+            <div class="md:grid grid-cols-12 gap-x-12 h-full">
+              <div class="bg-gray-600 col-span-6 col-start-7 flex w-full h-full">
                 <div class="flex-1">
                   <div class="animate-slide-up w-[200px] h-full mx-auto bg-left-top bg-repeat-y bg-[length:100%_auto]" style="background-image: url(/assets/logo-stack-tight.png)"></div>
                 </div>
@@ -144,9 +144,9 @@
       </div>
       <div data-scroll-layer="logo-footer" class="invisible absolute inset-0 h-screen">
         <div class="absolute bottom-0 left-0 w-full">
-          <div class="bg-gray-500 text-gray-400">
-            <div class="container py-12">
-              <div class="-ml-[20px]">
+          <div class="bg-gray-500 text-gray-370" data-aos="fade-in" data-aos-anchor="#contact-form" data-aos-anchor-placement="center-center">
+            <div class="container pt-12">
+              <div class="-ml-[20px] -mb-[2%]">
                 <a class="block" href="index.html" class="logo">
                   <h1 class="sr-only">Tarango</h1>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 225">
@@ -292,7 +292,7 @@
                       <li class="pt-2 pb-1 border-b border-gray-170">Creative Resourcing</li>
                       <li class="pt-2 pb-1 border-b border-gray-170">Visual identities</li>
                       <li class="pt-2 pb-1 border-b border-gray-170">Production</li>
-                      <li class="pt-2 pb-1 border-b border-gray-170">Project Management</li>
+                      <li class="pt-2 pb-1 md:border-b md:border-gray-170">Project Management</li>
                     </ul>
                   </div>
                 </div>
@@ -306,13 +306,13 @@
                       <li class="pt-2 pb-1 border-b border-gray-170">Consumer Technology</li>
                       <li class="pt-2 pb-1 border-b border-gray-170">Entertainment</li>
                       <li class="pt-2 pb-1 border-b border-gray-170">Health Care</li>
-                      <li class="pt-2 pb-1 border-b border-gray-170">Insurance</li>
+                      <li class="pt-2 pb-1">Insurance</li>
                     </ul>
                     <ul class="flex-1 text-sm border-t border-gray-170">
                       <li class="pt-2 pb-1 border-b border-gray-170">Finance and Investment</li>
                       <li class="pt-2 pb-1 border-b border-gray-170">High Tech</li>
                       <li class="pt-2 pb-1 border-b border-gray-170">Communication</li>
-                      <li class="pt-2 pb-1 border-b border-gray-170">Internet Security</li>
+                      <li class="pt-2 pb-1">Internet Security</li>
                     </ul>
                   </div>
                 </div>
@@ -326,13 +326,13 @@
     <section data-scroll-layer-trigger="vertical-logos" class="relative">
       <div class="absolute inset-0 shadow-top md:shadow-bottom pointer-events-none"></div>
       <div class="container-fullbleed">
-        <div class="md:grid grid-cols-12">
+        <div class="md:grid grid-cols-12 gap-x-12">
           <!-- punch out -->
-          <div class="punch-out min-h-[60vh] md:min-h-0 md:col-span-5 md:order-2"></div>
+          <div class="punch-out min-h-[60vh] md:min-h-0 md:col-span-6 md:order-2"></div>
           <!-- end punch out -->
-          <div class="md:col-span-7 bg-gray-390 relative md:static">
+          <div class="md:col-span-6 bg-gray-390 relative md:static">
             <div class="md:hidden absolute inset-0 shadow-above shadow-below pointer-events-none"></div>
-            <div class="container py-16 md:py-24 h-full">
+            <div class="container md:w-full relative py-16 md:py-24 h-full">
               <div data-slideshow class="flex flex-col gap-y-9 h-full">
                 <ul class="flex items-center gap-x-2">
                   <li data-slide-num="0" class="w-[13px] h-[13px] rounded-full bg-gray-150">
@@ -620,9 +620,9 @@
     </section>
 
     <section id="contact" data-scroll-layer-trigger="logo-footer" class="bg-gray-500 text-gray-100">
-      <div class="shadow-top shadow-below">
+      <div class="shadow-top">
         <div class="container py-12 md:pt-24">
-          <div class="font-extralight">
+          <div id="contact-form" class="font-extralight">
             <div class="grid gap-y-12 md:gap-y-0 md:gap-x-24 md:grid-cols-2 md:grid-rows-6">
               <div class="md:col-span-1 md:row-span-3">
                 <h2 class="text-5xl md:text-8xl font-serif font-light mt-0">

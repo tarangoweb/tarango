@@ -42,7 +42,6 @@
 
 <body class="font-body font-sans font-light bg-gray-500">
 
-
   <header>
     <div class="bg-gray-500 text-gray-100">
       <div class="container py-12 flex flex-col md:flex-row justify-between">
@@ -65,10 +64,10 @@
           <nav class="md:hidden">
             <ul class="text-sm font-medium tracking-wider uppercase">
               <li>
-                <a class="inline-block py-1" href="/">Home</a>
+                <a class="inline-block pt-2 animated-underline" href="/">Home</a>
               </li>
               <li class="md:hidden">
-                <a class="inline-block py-1" href="#contact">Say Hello</a>
+                <a class="inline-block pt-2 animated-underline" href="#contact">Say Hello</a>
               </li>
             </ul>
           </nav>
@@ -113,11 +112,11 @@
           <div class="animate-slide-right min-h-full bg-left-top bg-repeat bg-cover" style="background-image: url(/assets/tiles-row-02.jpg)"></div>
         </div>
       </div>
-      <div data-scroll-layer="vertical-logos" class="invisible absolute inset-0">
-        <div class="absolute inset-0">
+      <div data-scroll-layer="vertical-logos" class="invisible absolute inset-0 bg-gray-390">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent from-60% to-gray-600 to-60%">
           <div class="container-fullbleed h-full">
-            <div class="md:grid grid-cols-12 h-full">
-              <div class="col-span-5 col-start-8 flex w-full h-full">
+            <div class="md:grid grid-cols-12 gap-x-12 h-full">
+              <div class="bg-gray-600 col-span-6 col-start-7 flex w-full h-full">
                 <div class="flex-1">
                   <div class="animate-slide-up w-[200px] h-full mx-auto bg-left-top bg-repeat-y bg-[length:100%_auto]" style="background-image: url(/assets/logo-stack-tight.png)"></div>
                 </div>
@@ -131,9 +130,9 @@
       </div>
       <div data-scroll-layer="logo-footer" class="invisible absolute inset-0 h-screen">
         <div class="absolute bottom-0 left-0 w-full">
-          <div class="bg-gray-500 text-gray-400">
-            <div class="container py-12">
-              <div class="-ml-[20px]">
+          <div class="bg-gray-500 text-gray-370" data-aos="fade-in" data-aos-anchor="#contact-form" data-aos-anchor-placement="center-center">
+            <div class="container pt-12">
+              <div class="-ml-[20px] -mb-[2%]">
                 <a class="block" href="index.html" class="logo">
                   <h1 class="sr-only">Tarango</h1>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 225">
@@ -152,27 +151,32 @@
     </section>
 
     <section class="bg-gray-500 text-gray-100">
-      <div class="container py-12">
+      <div class="container">
         <article class="prose prose-sm md:prose-base prose-on-dark font-extralight">
           <div class="md:grid grid-cols-2 gap-x-12">
             <div class="">
-              <div class="border-b-2 border-gray-300"></div>
-              <p class="text-sm font-black uppercase mt-3 mb-0">Chargepoint</p>
-              <p class="mt-12 mb-24 md:mb-32 text-3xl font-serif font-light">Proving once again that less is more.</p>
-              <div class="border-b-2 border-gray-300"></div>
-              <div class="mt-8 mb-16">
-                <p class="">ChargePoint was hosting an all-day media event to help press representatives better understand
-                  the electric vehicle charging category. We collaborated with the executive team to provide a consistent
-                  look and feel across presenter materials and worked individually with CEO, CCO, CMO and Head of
-                  Technology to address a wide range of topics including company history, vision moving forward and
-                  category misconceptions. We accomplished a new standard of presenting within the organization that
-                  proved once again, that less is more. Executive leaders could now break free of bullet points and text
-                  heavy PowerPoint slides. Our presentation design received high praise from the presenters, internal
-                  design department and event attendees. </p>
+              <div class="xl:sticky top-0 py-12">
+                <div class="border-b-2 border-gray-300"></div>
+                <p class="text-sm font-black uppercase mt-3 mb-0">Chargepoint</p>
+                <p class="mt-4 mb-16 md:mt-4 md:mb-16 text-3xl font-serif font-light">Proving once again that less is
+                  more.</p>
+                <div class="border-b-2 border-gray-300"></div>
+                <div class="mt-8 mb-16">
+                  <p class="">ChargePoint was hosting an all-day media event to help press representatives better
+                    understand
+                    the electric vehicle charging category. We collaborated with the executive team to provide a
+                    consistent
+                    look and feel across presenter materials and worked individually with CEO, CCO, CMO and Head of
+                    Technology to address a wide range of topics including company history, vision moving forward and
+                    category misconceptions. We accomplished a new standard of presenting within the organization that
+                    proved once again, that less is more. Executive leaders could now break free of bullet points and text
+                    heavy PowerPoint slides. Our presentation design received high praise from the presenters, internal
+                    design department and event attendees. </p>
+                </div>
               </div>
             </div>
             <div class="">
-              <div class="">
+              <div class="py-12">
                 <figure class="mt-0 md:mt-0">
                   <img class="" src="/assets/case_studies/chargepoint/cs_chargepoint_001.jpg" alt="Chargepoint slide 1" />
                 </figure>
@@ -253,9 +257,9 @@
     </section>
 
     <section id="contact" data-scroll-layer-trigger="logo-footer" class="bg-gray-500 text-gray-100">
-      <div class="shadow-top shadow-below">
+      <div class="shadow-top">
         <div class="container py-12 md:pt-24">
-          <div class="font-extralight">
+          <div id="contact-form" class="font-extralight">
             <div class="grid gap-y-12 md:gap-y-0 md:gap-x-24 md:grid-cols-2 md:grid-rows-6">
               <div class="md:col-span-1 md:row-span-3">
                 <h2 class="text-5xl md:text-8xl font-serif font-light mt-0">
