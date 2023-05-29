@@ -50,10 +50,10 @@ module.exports = {
 				},
 				"slide-up": {
 					"0%": { "background-position-y": "0px" },
-					"100%": { "background-position-y": "1275px" },
+					"100%": { "background-position-y": "1708px" },
 				},
 				"slide-down": {
-					"0%": { "background-position-y": "1275px" },
+					"0%": { "background-position-y": "1708px" },
 					"100%": { "background-position-y": "0px" },
 				},
 				"fade-in": {
