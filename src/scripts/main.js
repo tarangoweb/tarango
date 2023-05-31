@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		// prepare success message
 		const formSuccess = document.createElement("p");
 		formSuccess.classList.add("font-bold", "p-4", "border", "border-green-500", "text-green-500", "rounded-sm");
-		formSuccess.innerHTML = "Thank you!";
+		formSuccess.innerHTML = "Thank you! We'll be in touch shortly.";
 
 		// disable submit button
 		buttonSubmit.disabled = true;
