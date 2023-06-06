@@ -93,6 +93,9 @@ module.exports = {
 				cream: {
 					500: "#F7F2E5",
 				},
+				blue: {
+					500: "#56BEFB"
+				}
 			},
 			typography: ({ theme }) => ({
 				sm: {
